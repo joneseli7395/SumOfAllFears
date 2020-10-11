@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.numInput {
+    background-color: #a8a8a8
+}
+
+#kValue {
+    background-color: rgba(226, 134, 45, 0.95)
+}
+
+#sumBtn {
+    width: 75%;
+}
