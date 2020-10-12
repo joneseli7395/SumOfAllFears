@@ -11,6 +11,12 @@
 
     <title>Sum of All Fears</title>
 
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -18,6 +24,7 @@
     <link href="/content/custom.css" rel="stylesheet" />
     <link href="content/boxicons.min.css" rel="stylesheet" />
     <link href="content/icofont.min.css" rel="stylesheet" />
+    <link href="content/prism (2).css" rel="stylesheet" />
 
 </head>
 
@@ -39,10 +46,10 @@
                         <a class="nav-link" href="/Code.html"><i class="bx bx-code-alt"></i>Code</a>
                     </li>
                     <li class="nav-item">
-                        <a target="_blank" class="nav-link" href="#"><i class="bx bxl-github"></i>Git</a>
+                        <a target="_blank" class="nav-link" href="https://github.com/joneseli7395/SumOfAllFears"><i class="bx bxl-github"></i>Git</a>
                     </li>
                     <li class="nav-item">
-                        <a target="_blank" class="nav-link" href="#"><i class="bx bx-male"></i>Portfolio</a>
+                        <a target="_blank" class="nav-link" href="https://www.ejdevspot.com/"><i class="bx bx-male"></i>Portfolio</a>
                     </li>
                 </ul>
             </div>
@@ -54,37 +61,94 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Sum of All Fears!</h1>
-                <p class="lead">You can customize the template colors</p>
+                <p class="lead">Your inputs will be an equation. Your K value will be the desired sum. Fill the boxes and click the button, if your <strong><em>dare</em></strong>.</p>
             </div>
         </div>
     </div><hr />
 
     <div class="container">
         <div class="row">
-            <div class="col"><input type="text" class="inputs" id="input1" /></div>
-            <div class="col"><input type="text" class="inputs" id="input2" /></div>
-            <div class="col"><input type="text" class="inputs" id="input3" /></div>
-            <div class="col"><input type="text" class="inputs" id="input4" /></div>
-            <div class="col"><input type="text" class="inputs" id="input5" /></div>
-            <div class="col"><input type="text" class="inputs" id="kValue" placeholder="K Value" /></div>
-        </div><br />
-        <div class="row">
-            <div class="col text-center">
-                <button id="sumBtn" class="btn btn-primary">Find the K</button>
-            </div>
-        </div>
-    </div><hr />
-
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
+            <div class="col">
                 <div class="card">
-                    <div class="card-body">
-                        <span id="output"></span>
-                        <span id="numSum"></span>
+                    <div class="card-header text-center">
+                        <h4>What is Sum of All Fears?</h4>
+                    </div>
+                    <div class="card-body info text-center">
+                        <img src="images/soafinfo.png" />
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <button class="btn btn-dark"> About </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col"></div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>How does it work?</h4>
+                    </div>
+                    <div class="card-body info text-center">
+                        <img src="images/soafcode.png" />
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <button class="btn btn-dark infoBtn"> Code </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><hr /><br />
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col"><input type="text" class="inputs" id="input1" placeholder="Input #1" /></div>
+            <div class="col"><input type="text" class="inputs" id="input2" placeholder="Input #2" /></div>
+            <div class="col"><input type="text" class="inputs" id="input3" placeholder="Input #3" /></div>
+            <div class="col"><input type="text" class="inputs" id="input4" placeholder="Input #4" /></div>
+            <div class="col"><input type="text" class="inputs" id="input5" placeholder="Input #5" /></div>
+        </div><br />
+        <div class="row">
+            <div class="col text-center">
+                <input type="text" class="inputs" id="kValue" placeholder="Value of K" />
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col text-center">
+                <button id="sumBtn" class="btn btn-dark"><i class="bx bx-plus"></i> Find K </button>
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col text-center">
+                <button onclick="clearText()" id="clearBtn" class="btn btn-dark"> Clear </button>
+            </div>
+        </div>
+    </div><hr /><br />
+
+    <h2>Results:</h2><br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="output"><span id="output"></span></p>
+                        <p class="output"><span id="numSum"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
         </div>
     </div>
 
@@ -96,6 +160,7 @@
 
     <!--Custom JS-->
     <script src="/scripts/custom.js"></script>
+    <script src="scripts/prism (2).js"></script>
 
 </body>
 

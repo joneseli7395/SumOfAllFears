@@ -1,14 +1,60 @@
 ﻿body {
+    background: linear-gradient(rgba(226, 134, 45, 0.95), rgba(0, 0, 0, 0.90))
 }
 
-.numInput {
-    background-color: #a8a8a8
-}
-
-#kValue {
+/*#kValue {
     background-color: rgba(226, 134, 45, 0.95)
 }
-
+*/
 #sumBtn {
-    width: 75%;
+    width: 40%;
+}
+
+#clearBtn {
+    width: 40%;
+}
+
+.card-body {
+    min-height: 250px;
+    outline: solid black 2px
+}
+
+
+.output {
+    font-size: 50px
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff
+}
+
+.lead {
+    color: #fff
+}
+
+.card-header {
+    outline: solid black 2px;
+}
+
+.card-footer {
+    outline: solid black 2px;
+}
+
+input {
+    outline: solid black 2px;
+}
+
+.info {
+    min-height:200px;
+}
+
+.infoBtn {
+    width: 70px
+}
+
+h2 {
+    text-align:center;
+    color: #fff
 }

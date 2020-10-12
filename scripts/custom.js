@@ -10,17 +10,39 @@
 
     let sumArray = [input1, input2, input3, input4, input5];
     //Searching vs forward searching 
+    let result = "";
+
     for (let i = 0; i < sumArray.length; i++) {
-        for (let s = 0; s < sumArray.length; s++) {
-            if (sumArray[i] + sumArray[s] === kValue) {
-                document.getElementById("output").innerHTML = "Success!";
-                document.getElementById("numSum").innerHTML = `${sumArray[i]} + ${sumArray[s]} = ${kValue}`;
+        for (let s = i + 1; s < sumArray.length; s++) {
+            if (sumArray[i] + sumArray[s] == kValue) {
+                result = `${sumArray[i]} + ${sumArray[s]} = ${kValue}`;
+                break;
             }
         }
+    }
+
+    if (result != "") {
+        document.getElementById("output").innerHTML = "Success!";
+        document.getElementById("numSum").innerHTML = result;
+    }
+    else {
+        document.getElementById("output").innerHTML = "No solution found, try again!";
+        document.getElementById("numSum").innerHTML = "";
     }
 })
 
 
+function clearText() {
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
+    document.getElementById("input3").value = "";
+    document.getElementById("input4").value = "";
+    document.getElementById("input5").value = "";
+    document.getElementById("kValue").value = "";
+
+    document.getElementById("output").value = "";
+    document.getElementById("numSum").value = "";
+}
 
 //let arrayLength = parseInt(Math.random() * 10); //Not 10 
 //    let myArray = new Array(arrayLength);

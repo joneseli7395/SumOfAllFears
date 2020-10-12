@@ -67,12 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-chrome-192x192.png" />
+    <Content Include="android-chrome-512x512.png" />
+    <Content Include="apple-touch-icon.png" />
     <Content Include="code.html" />
     <Content Include="content\boxicons.min.css" />
     <Content Include="content\custom.css" />
     <Content Include="content\icofont.min.css" />
+    <Content Include="content\prism %282%29.css" />
+    <Content Include="favicon-16x16.png" />
+    <Content Include="favicon-32x32.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\soafcode.png" />
+    <Content Include="images\soafinfo.png" />
     <Content Include="scripts\custom.js" />
     <Content Include="index.html" />
+    <Content Include="scripts\prism %282%29.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +94,7 @@
     <Content Include="content\fonts\icofont.woff" />
     <Content Include="content\fonts\icofont.woff2" />
     <None Include="packages.config" />
+    <Content Include="site.webmanifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,9 +102,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
